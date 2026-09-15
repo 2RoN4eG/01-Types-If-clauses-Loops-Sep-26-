@@ -14,8 +14,8 @@
 
 number = int(input("Input number less than 1_000_000_000: "))
 
-digit = 0
-if 0 < number <= 1_000_000_000:
+if 0 <= number <= 1_000_000_000:
+    digit = 0
     while number > 0:
         number, rest = number // 10, number % 10
         digit = max(digit, rest)

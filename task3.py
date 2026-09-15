@@ -11,37 +11,40 @@
 
 ---
 """
+
+
 month = input("input month: ")
 year = int(input("input year: "))
 
+days = None
 match(month):
-    case 'January':
+    case 'January' | 'january':
         days = 31
-    case 'February' if year % 4 == 0:
+    case 'February' | 'february' if year % 4 == 0:
         days = 29
-    case 'February':
+    case 'February' | 'february':
         days = 28 
-    case 'March':
+    case 'March' | 'march':
         days = 31
-    case 'April':
+    case 'April' | 'april':
         days = 30
-    case 'May':
+    case 'May' | 'may':
         days = 31 
-    case 'June':
+    case 'June' | 'june':
         days = 30 
-    case 'July':
+    case 'July' | 'july':
         days = 31 
-    case 'August':
+    case 'August' | 'august':
         days = 31
-    case 'September':
+    case 'September' | 'september':
         days = 30
-    case 'October':
+    case 'October' | 'october':
         days = 31
-    case 'November':
+    case 'November' | 'november':
         days = 30
-    case 'December':
+    case 'December' | 'december':
         days = 31
     case _:
-        print("Не правильно задан месяц: месяц должен быть на английском с большой буквы")
+        print("Не правильно задан месяц: месяц должен быть на английском")
 
 print("Результат: ", days)

@@ -33,20 +33,23 @@ d1 d2 d3 d4 d5 d6 d7 d8 d9 d10
 - Дано: `123456789` Результат: `123456789X`
 """
 
+
 isbn = input("Input ISBN: ")
 
-check_sum = 0
-weight = 10
-for digit in isbn:
-    print("", int(digit) * weight)
-    check_sum += (int(digit) * weight)
-    weight -= 1
-
-check_sum = 11 - (check_sum % 11)
-
-if check_sum == 10:
-    isbn += 'X'
+if len(isbn) != 9:
+    print("ISBN must have 9 digits")
 else:
-    isbn += str(check_sum)
+    check_sum = 0
+    weight = 10
+    for digit in isbn:
+        check_sum += (int(digit) * weight)
+        weight -= 1
 
-print("isbn is ", isbn)
+    check_sum = 11 - (check_sum % 11)
+
+    if check_sum == 10:
+        isbn += 'X'
+    else:
+        isbn += str(check_sum)
+
+    print("ISBN is ", isbn)

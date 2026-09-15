@@ -12,6 +12,7 @@
 ---
 """
 
+
 number = int(input("input number: "))
 
 sum = 0
