@@ -48,12 +48,10 @@ else:
         check_sum += (int(digit) * weight)
         weight -= 1
 
-    check_sum = 11 - (check_sum % 11)
+    check_sum = (11 - (check_sum % 11)) % 11
 
     if check_sum == 10:
         isbn += 'X'
-    elif check_sum == 11:
-        isbn += '0'
     else:
         isbn += str(check_sum)
 
