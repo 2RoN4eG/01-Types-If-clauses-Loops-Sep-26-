@@ -35,6 +35,8 @@ d1 d2 d3 d4 d5 d6 d7 d8 d9 d10
 
 
 isbn = input("Input ISBN: ")
+# isbn = '000011000'
+# isbn = '030640615'
 
 if len(isbn) != 9:
     print("ISBN must have 9 digits")
@@ -49,6 +51,8 @@ else:
 
     if check_sum == 10:
         isbn += 'X'
+    elif check_sum == 11:
+        isbn += '0'
     else:
         isbn += str(check_sum)
 
